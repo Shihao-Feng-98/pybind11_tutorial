@@ -6,8 +6,9 @@ See [pybind11 document](https://pybind11.readthedocs.io/en/stable/installing.htm
 git clone https://github.com/pybind/pybind11
 ```
 
-Example code see ```example.cpp``` and ```check.py```. Use pybind11 in ```CMakeLists.txt```.
+Example code see ```example.cpp``` and ```check.py```. Use pybind11 in ```CMakeLists.txt```
 ```
+find_package(Python COMPONENTS Interpreter Development REQUIRED) # generate for the corresponding python version
 add_subdirectory(pybind11) 
 pybind11_add_module(example example.cpp)
 ```
